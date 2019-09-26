@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content  %}
+<h1 class="myhead2">Buy this item</h1>
+<div class="row">
+    <div class="col-sm-6 pd-2">       
+          <h3 class="well"><strong>Contact the person by mail</strong></h3><br>
+        <form method="post">{% csrf_token %}
+            <input class="form-control" type="text" name="uname" placeholder="Name" /><br>
+            <input class="form-control"  type="tel" name="phone" placeholder="Phone No" /><br>
+            <input class="form-control"  type="email" name="email" placeholder="Email" /><br>
+            <textarea class="form-control" rows="4" name="msg" placeholder="Message"></textarea><br>
+            <input class="btn btn-dark btn-block" type="submit" value="Submit"  /><br>
+        </form>
+    </div>
+</div>
+{% endblock %}

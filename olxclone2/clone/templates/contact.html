@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content  %}
+<h1 class="myhead2">Contact Us</h1>
+<div class="row m-4 ">
+    <div class="col-sm-6">       
+          <h3 class="well"><strong>OLXClone</strong></h3><br>
+              <span class="fa fa-map-marker mr-1"></span><strong> Address:</strong>  Prem palace, near Nalgarh Chowk, Civil lines , Raipur, Chhattisgarh 492001<br><br>
+<span class="fa fa-phone mr-1"></span><strong> Phone:</strong>   0771 40***10<br><br>
+<span class="fa fa-print mr-1"></span><strong> Fax:</strong>   0771 40***20<br><br>
+<span class="fa fa-envelope mr-1"></span> info@olxclone.co.in<br><br>
+<span class="fa fa-globe mr-1"></span> http://www.olxclone.co.in</h3><br>
+     </div>
+    <div class="col-sm-6">        
+    <h3>Enquiry</h3>
+        <form method="post">{% csrf_token %}
+            <input class="form-control" type="text" name="uname" placeholder="Name" /><br>
+            <input class="form-control"  type="tel" name="phone" placeholder="Phone No" /><br>
+            <textarea class="form-control" rows="4" name="msg" placeholder="Message"></textarea><br>
+            <input class="btn btn-dark btn-block" type="submit" value="Submit"  /><br>
+        </form>
+    </div>
+</div>
+<div class="row" id="mymap">
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.6332367707228!2d81.60678260324694!3d21.24638756493999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28dd2eba0d40e9%3A0x2defa08e5afd614!2sNalanda+Parisar-+Oxy+Reading+Zone!5e0!3m2!1sen!2sin!4v1562426845662!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>    
+</div>
+
+{% endblock %}
+
+

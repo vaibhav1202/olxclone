@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title  %}
+Items on sale
+{% endblock %}
+{% block content  %}
+<div class="container-fluid">
+<div class="row">
+<div class="col-sm-8">
+<a class="btn btn-sm btn-primary" href="/clone/item/create">Add New Item</a>
+</div>
+<div class="col-sm-4">
+<form class="form-inline" action="/clone/item/">
+<input value="{{request.GET.si}}" class="form-control form-control-sm" type="text" name="si" placeholder="Search" />
+<button class="btn btn-sm btn-success" type="submit">Search</button>
+</form>
+</div>
+</div>
+<h1>Items List</h1>
+<div class="row">
+	{% for p1 in object_list %}
+	<div class='col-sm-3 mb-3  text-center'>
+            <div class='card  mycard'>
+            <img style="height: 230px;" class='card-img-top img-thumbnail w-100 img-fluid p-1' src='/media/{{p1.s_img}}' alt='No Image!'>
+            <div class='card-body'>
+            <h3 class='card-title' style="color:black;">{{p1.item_name}}</h3>
+            <p class='card-text'> {{p1.s_price}}</p>
+            <a class="btn btn-sm btn-primary" href="/clone/item/{{p1.id}}">Read More</a>
+            </div>
+            </div>
+    </div>
+	{% endfor %}
+</div>
+</div>
+<style>
+.mycard{
+ transition: 1s;
+}
+.mycard:hover{
+ transform: scale(1.1);
+}
+</style>
+{% endblock %}

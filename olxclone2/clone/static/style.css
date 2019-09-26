@@ -1,0 +1,19 @@
+@charset "ISO-8859-1";
+body {
+/*	background-image: url('/static/images/back3.png'); */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+.myhead2{
+	background-color: rgba(0,0,0, 0.6);
+	color: white;
+	padding: 10px;
+	text-align: center;
+}
+.mybg{
+	background-image: url("/static/images/bg.gif");
+	background-size: cover;
+	background-position: center;
+}
+.mybox{
+	color: white;
+}

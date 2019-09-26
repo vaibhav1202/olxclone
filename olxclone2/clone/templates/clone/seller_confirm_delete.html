@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content  %}
+<div class="row py-5">
+	<div class="col-sm-8 offset-sm-2 pt-5">
+
+<form method="post" enctype="multipart/form-data">{% csrf_token %}
+Are you sure you want to delete?
+<input class="btn btn-sm btn-danger" type="submit" value="Yes">
+<a  class="btn btn-sm btn-primary"  href="/clone/item/">No</a>
+</form>
+	</div>
+</div>
+{% endblock %}
+

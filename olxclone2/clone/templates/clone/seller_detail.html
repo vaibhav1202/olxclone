@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content  %}
+<div style="background-image: url('/media/{{object.s_img}}'); background-size: cover; background-position: center;">
+<div style="background-color: white; opacity: 0.8;"  class="container-fluid p-5">
+<h1 class="myhead2">{{ object.item_name }}</h1>
+<table class="table table-striped">
+<tr><td>Seller name</td> <td>{{object.s_name}}</td></tr>
+<tr><td>Description</td> <td>{{object.s_description}}</td></tr>
+<tr><td>Email ID</td> <td>{{object.s_mail}}</td></tr>
+<tr><td>Price of item</td> <td>{{object.s_price}}</td></tr>
+<tr><td>Years used</td> <td>{{object.s_years}}</td></tr>
+<tr><td>Area</td> <td>{{object.s_area}}</td></tr>
+</table>
+<a class="btn btn-sm btn-success" href="/clone/item/buy/{{object.id}}">Buy this</a>
+{% if user.is_superuser or user == object.user %}
+<a class="btn btn-sm btn-warning" href="/clone/item/edit/{{object.id}}">Edit</a>
+<a class="btn btn-sm btn-danger" href="/clone/item/delete/{{object.id}}">Delete</a>
+{% endif %}
+<a class="btn btn-sm btn-primary" href="/clone/item/">Back</a>
+</div>
+</div>
+{% endblock %}
+
